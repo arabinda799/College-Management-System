@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/view.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Chakra+Petch:ital,wght@1,300&family=Martian+Mono:wght@500&family=Signika:wght@300&display=swap"
+    rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Chakra+Petch:ital,wght@1,300&family=Martian+Mono:wght@500&family=Quicksand:wght@300&family=Signika:wght@300&display=swap"
+    rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Chakra+Petch:ital,wght@1,300&family=Martian+Mono:wght@500&family=Quicksand:wght@300&family=Rubik:wght@500&family=Signika:wght@300&display=swap"
+    rel="stylesheet">
+    <style>
+        .table-div {
+            width: 50%;
+            margin: 6rem auto 0;
+        }
+        .table-div .add {
+            float: right;
+            padding-right: 7px;
+        }
+        .table-div button {
+            padding: 4px 8px;
+            font-size: 16px;
+            height: 36px;
+            margin-bottom: 5px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="left">
+            <a href="/">Home</a>
+            <a href="/admin_dashboard">Dashboard</a>
+            <a href="/register">Registration Form</a>
+        </div>
+
+        <div class="right">
+            <form action="/student_search" method="post" role="search" novalidate>
+                <input type="search" name="search" placeholder="Search" aria-label="Search">
+                <button type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+    <div class="table-div">
+        <div class="add">
+            <a href="/register"><button>+Add Student</button></a>
+        </div>
+        <table class="table">
+            <thead class="thead">
+                <tr>
+                    <th scope="col" class="th">#</th>
+                    <th scope="col" class="th">NAME</th>
+                    <th scope="col" class="th">ID</th>
+                    <th scope="col" class="th">EMAIL</th>
+                    <th scope="col" class="th">PHONE</th>
+                    <th scope="col" class="th">IMAGE</th>
+                    <th scope="col" class="th">ACTION</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each data}}
+                <tr>
+                    <td class="td">{{inc @index}}</td>
+                    <td class="td">{{name}}</td>
+                    <td class="td">{{regd_no}}</td>
+                    <td class="td">{{email}}</td>
+                    <td class="td">{{phone}}</td>
+                    <td class="td"><img src="../userImages/{{image}}" alt="" width="50px"></td>
+                    <td>
+                        {{!-- <a href="/student/{{this.id}}" type="button" class="btn btn-light btn-small"><i
+                                class="bi bi-eye"></i>View</a> --}}
+                        <a href="/edit_student/{{this.id}}" type="button" class="btn btn-light btn-small"><i
+                                class="bi bi-pencil"></i>Edit</a>
+                        <a href="/{{this.sl_no}}" type="button" class="btn btn-light btn-small"><i
+                                class="bi bi-person-x"></i>Delete</a>
+                    </td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+
+    </div>
+
+</body>
+
+</html>

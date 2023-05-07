@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome {{data.name}}</title>
+    <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+
+<body>
+    <div class="container">
+        <aside>
+            <div class="profile-img"><img src="../userImages/{{data.image}}" alt="" width="60px"></div>
+            <ul>
+                <li><a href="/faculty_profile">View Profile</a></li>
+                <li><a href="https://www.gec.edu.in/assets/extra-pdf/timetable.pdf">Time-Table</a></li>
+                <li><a href="https://docs.google.com/spreadsheets/d/1KceSsAtK1B3OXSgGouUH8PO7kfgL4pam/edit?usp=share_link&ouid=113033469290936092692&rtpof=true&sd=true">Attendance</a></li>
+                <li><a href="http://www.bputexam.in/studentsection/resultpublished/studentresult.aspx">Study Material</a></li>
+                <li><a href="/e-books">Question Bank</a></li>
+                <li><a href="/contact">Query</a></li>
+                <li id="logout"><a href="/logout">Log out</a></li>
+            </ul>
+        </aside>
+        <div class="main">
+            <section class="upper">
+                <div class="upper-img">
+                    <img src="../userImages/{{data.image}}" alt="" width="95px">
+                </div>
+                <div class="upper-info">
+                    <h2>{{data.name}}</h2>
+                <p>{{data.emp_id}}</p>
+                </div>
+            </section>
+            <section class="lower">
+                <h3>Academic Information</h3>
+                <table>
+                    <tr>
+                        <th>Full Name</th>
+                        <td id="dot">:</td>
+                        <td>{{data.name}}</td>
+                    </tr>
+                    <tr>
+                        <th>Faculty ID</th>
+                        <td id="dot">:</td>
+                        <td>{{data.emp_id}}</td>
+                    </tr>
+                    <tr>
+                        <th>Department</th>
+                        <td id="dot">:</td>
+                        <td>{{data.department}}</td>
+                    </tr>
+                    <tr>
+                        <th>Position</th>
+                        <td id="dot">:</td>
+                        <td>{{data.position}}</td>
+                    </tr>
+                    <tr>
+                        <th>Qualification</th>
+                        <td id="dot">:</td>
+                        <td>{{data.qualification}}</td>
+                    </tr>
+                    <tr>
+                        <th>DOJ</th>
+                        <td id="dot">:</td>
+                        <td>{{doj}}</td>
+                    </tr>
+                    <tr>
+                        <th>Mob</th>
+                        <td id="dot">:</td>
+                        <td>{{data.phone}}</td>
+                    </tr>
+                    <tr>
+                        <th>Email</th>
+                        <td id="dot">:</td>
+                        <td>{{data.email}}</td>
+                    </tr>
+                    <tr>
+                        <th>Gender</th>
+                        <td id="dot">:</td>
+                        <td>{{data.gender}}</td>
+                    </tr>
+                </table>
+            </section>
+        </div>
+    </div>
+</body>
+
+</html>

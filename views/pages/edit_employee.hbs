@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+
+    <link rel="stylesheet" href="../css/register.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <style>
+        body {
+         animation: none;
+      }
+
+      a {
+         text-decoration: none;
+      }
+
+      div#student {
+         padding-top: 30px;
+      }
+
+      button {
+         background: #fff;
+      }
+
+      .form {
+         padding-top: 20px;
+      }
+    </style>
+</head>
+
+<body>
+
+    {{#if success}}
+        <div class="alert" style="padding-left: 40px; margin-top: 10px; background: #3eb573">
+            <h2>User updated!! <a href="/view">Click here</a> to view in the list</h2>
+        </div>
+        {{else}}
+        <div class="alert" style="padding-left: 40px; margin-top: 10px; background: #f92b2b;">
+            <h2>User not updated!! <a href="/view">Try again</h2>
+        </div>
+    {{/if}}
+
+
+
+
+    <section>
+
+        {{!-- Employee Registration --}}
+
+        {{#each data}}
+        <div class="form" id="employee" style="display: block;">
+            <h1 style="text-align: center">Employee Details</h1>
+            <form action="/update_employee/{{id}}" method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                    <div class="col-4">
+                        <label for="name">Full Name</label>
+                        <input type="text" name="name" id="name" required value="{{this.name}}" maxlength="60">
+                    </div>
+                    <div class="col-4">
+                        <label for="emp_id">Employee Id</label>
+                        <input type="text" name="emp_id" id="emp_id" required value="{{this.emp_id}}" maxlength="20">
+                    </div>
+                    <div class="col-4">
+                        <label for="type">Employee Type</label>
+                        <input type="text" name="type" id="type" required value="{{this.type}}" maxlength="20">
+                    </div>
+                    <div class="col-4">
+                        <label for="position">Job Position</label>
+                        <input type="text" name="position" id="position" required value="{{this.position}}" maxlength="30">
+                    </div>
+                    <div class="col-4">
+                        <label for="dob">DOB</label>
+                        <input type="date" name="dob" id="dob" required value="{{this.dob}}">
+                    </div>
+                    <div class="col-4">
+                        <label for="gender">Gender</label>
+                        <input type="text" name="gender" id="gender" required value="{{this.gender}}">
+                    </div>
+                    <div class="col-4">
+                        <label for="phone">Phone No</label>
+                        <input type="text" name="phone" id="phone" required value="{{this.phone}}" maxlength="10">
+                    </div>
+                    <div class="col-4">
+                        <label for="email">Email</label>
+                        <input type="text" name="email" id="email" required value="{{this.email}}" maxlength="45">
+                    </div>
+                    <div class="col-4">
+                        <label for="blood">Blood Group</label>
+                        <input type="text" name="blood" id="blood" required value="{{this.blood}}" maxlength="10">
+                    </div>
+                    <div class="col-4">
+                        <label for="address">Address</label>
+                        <input type="text" name="address" id="address" required value="{{this.address}}" maxlength="200">
+                    </div>
+                    <div class="col-4">
+                        <label for="doj">DOJ</label>
+                        <input type="date" name="doj" id="doj" required value="{{this.doj}}">
+                    </div>
+                    <div class="col-4">
+                        <label for="qualification">Qualification</label>
+                        <input type="text" name="qualification" id="qualification" required value="{{this.qualification}}" maxlength="20">
+                    </div>
+                    <div class="col-4">
+                        <label for="department">Department</label>
+                        <input type="text" name="department" id="department" required value="{{this.department}}" maxlength="45">
+                    </div>
+                    <div class="col-4">
+                        <label for="aadhar">Aadhar No.</label>
+                        <input type="text" name="aadhar" id="aadhar" required value="{{this.aadhar}}" maxlength="12">
+                    </div>
+                    <div class="col-4">
+                        <label for="account">Account No</label>
+                        <input type="text" name="account" id="account" required value="{{this.account}}" maxlength="11">
+                    </div>
+                    <div class="col-4">
+                        <label for="bank">Bank Name</label>
+                        <input type="text" name="bank" id="bank" maxlength="200" value="{{this.bank}}">
+                    </div>
+                    <div class="col-4">
+                        <label for="marital_status">Marital Status</label>
+                        <input type="text" name="marital_status" id="marital_status" required value="{{this.marital_status}}" maxlength="10">
+                    </div>
+                    <div class="col-4">
+                        <label for="image">Image</label>
+                        <input type="file" name="image" id="image" required>
+                    </div>
+
+                    <div class="btn">
+                        <button type="submit">Update</button>
+                    </div>
+                </div>
+            </form>
+            <div class="btn">
+                <a href="/faculty_list"><button class="view">View</button></a>
+
+            </div>
+        </div>
+        {{/each}}
+
+        
+    </section>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

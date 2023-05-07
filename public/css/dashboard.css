@@ -1,0 +1,130 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+body{
+    background: #ededed;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    width: 70%;
+    box-shadow: 0px 0px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 505px;
+    border-top-right-radius: 250px;
+    /* border-bottom-right-radius: 317px; */
+}
+aside{
+    background: #010052;
+    width: 22%;
+    height: inherit;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0px 0px 10px #010052;
+
+}
+
+.profile-img {
+    margin-top: 2rem;
+}
+
+ul {
+    position: relative;
+    top: 3rem;
+    font-size: 1.3rem;
+}
+
+ul li {
+    margin-bottom: 1rem;
+    line-height: 1.1;
+    transition: all 200ms ease;
+}
+
+ul li:hover {
+    border: transparent;
+    background: #c0c0c0;
+    box-shadow: 0px 0px 5px;
+    border-radius: 4px;
+    height: 30px;
+    padding-top: 2px;
+    text-align: center;
+}
+ul li:hover a{
+color: #010052;
+}
+#logout:hover{
+    border: transparent;
+    background: #f33737;
+    box-shadow: 0px 0px 5px;
+    border-radius: 4px;
+    height: 30px;
+    padding-top: 2px;
+    text-align: center;
+}
+.main{
+    background: #fff;
+    width: 78%;
+    height: inherit;
+    border-top-right-radius: 250px;
+    /* border-bottom-right-radius: 317px; */
+}
+a{
+    color: #c0c0c0;
+}
+
+
+.upper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+}
+
+.upper img {
+    margin-left: 5rem;
+}
+
+.upper-info {
+    margin-left: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.upper-info p {
+    font-size: 1.18rem;
+}
+
+th {
+    text-align: start;
+    padding-right: 95px;
+}
+
+#dot {
+    padding-right: 12px;
+}
+
+.lower {
+    margin-left: 5rem;
+    margin-bottom: 2rem;
+}
+
+.lower h3 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+table {
+    font-size: 1.15rem;
+}

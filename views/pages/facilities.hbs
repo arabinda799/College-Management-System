@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facilities</title>
+   <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+    <style>
+        .facilities-container {
+            position: relative;
+            top: 77px;
+        }
+
+        .hostel {
+            display: flex;
+            align-items: center;
+            background: #d8d8d8;
+            /* height: 100vh; */
+        }
+
+        .bank {
+            display: flex;
+            align-items: center;
+            background: #d8d8d8;
+        }
+
+        .bus {
+            margin-top: -76px;
+            display: flex;
+            align-items: center;
+            background: #d8d8d8;
+            margin-bottom: 76px;
+        }
+
+        .rightside {
+            width: 50%;
+            margin: 65px 10px 116px;
+        }
+
+        .rightside img {
+            border-radius: 5px;
+            border: 1px solid white;
+            box-shadow: 1px 1px 10px;
+        }
+
+        .leftside {
+            width: 50%;
+            margin-left: 10px;
+            margin-top: -65px;
+        }
+
+        .leftside h1 {
+            margin-bottom: 5px;
+        }
+
+        .leftside p {
+            font-size: 16px;
+        }
+
+
+
+        .canteen {
+            display: flex;
+            align-items: center;
+            background: #d8d8d8;
+            margin-top: -90px;
+        }
+
+        .rightside1 {
+            width: 50%;
+            margin-left: 10px;
+            margin-right: 5px;
+        }
+
+        .rightside1 p {
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .leftside1 {
+            width: 50%;
+            margin: 25px 10px;
+        }
+
+        .leftside1 img {
+            border-radius: 5px;
+            border: 1px solid white;
+            box-shadow: 1px 1px 10px;
+            margin-top: 25px;
+            height: 260px;
+            width: 612px;
+        }
+
+
+
+
+        .gym {
+            display: flex;
+            align-items: center;
+            background: #d8d8d8;
+            margin-top: -185px;
+        }
+
+        .rightside2 {
+            width: 50%;
+            margin: 135px 10px;
+            margin-top: 260px;
+        }
+
+        .rightside2 img {
+            border-radius: 5px;
+            border: 1px solid white;
+            box-shadow: 1px 1px 10px;
+            height: 370px;
+        }
+
+        .leftside2 {
+            width: 50%;
+            margin-left: 10px;
+            margin-top: 70px;
+        }
+
+        .leftside2 h1 {
+            margin-bottom: 10px;
+        }
+
+        .leftside2 p {
+            font-size: 16px;
+        }
+
+
+
+        .medical {
+            display: flex;
+            align-items: center;
+            background: #d8d8d8;
+            margin-top: -140px;
+        }
+
+
+        .visit {
+            display: flex;
+            align-items: center;
+            background: #d8d8d8;
+            margin-top: -130px;
+        }
+
+        .rightside3 {
+            width: 50%;
+            margin: 135px 10px;
+            margin-top: 204px;
+        }
+
+        .rightside3 img {
+            border-radius: 5px;
+            border: 1px solid white;
+            box-shadow: 1px 1px 10px;
+            height: 265px;
+            width: 605px;
+        }
+
+        .leftside3 {
+            width: 50%;
+            margin-left: 10px;
+        }
+
+        .leftside3 h1 {
+            margin-bottom: 10px;
+        }
+
+        .leftside3 p {
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+
+
+
+        .library {
+            display: flex;
+            align-items: center;
+            background: #d8d8d8;
+            margin-top: -130px;
+        }
+
+        .rightside4 {
+            width: 50%;
+            margin-left: 10px;
+            margin-right: 5px;
+            margin-top: 95px;
+        }
+
+        .rightside4 p {
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .leftside4 {
+            width: 50%;
+            margin: 25px 10px;
+        }
+
+        .leftside4 img {
+            border-radius: 5px;
+            border: 1px solid white;
+            box-shadow: 1px 1px 10px;
+            margin-top: 25px;
+            height: 280px;
+            width: 612px;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    {{>header}}
+    <div class="facilities-container">
+        <div class="hostel">
+            <div class="leftside">
+                <h1>Hostel<h1>
+                        <p>The hostel facility for both Boys' and Girls' are available within the campus and their
+                            administration
+                            centrally lies with the Dean, Administration of the college. The in-campus hostel provides a
+                            much better
+                            learning environment, as most of the time students resort to collaborative learning for
+                            covering up
+                            their syllabi and other project works. Staying within comfort and high-security zone of
+                            college campus
+                            significantly enhances the performance level of students in University examinations and
+                            various
+                            placement drives. Evening classes for self-study and doubt clearings are regularly carried
+                            out which
+                            turns out to be one of the major advantages, most of the time parents look forward to while
+                            putting
+                            their wards in campus hostel. Besides, during weekends, cultural programs are arranged on
+                            campus, in
+                            order to provide a little relaxation from the busy and hectic schedules associated with
+                            various academic
+                            activities.</p>
+                        <p><b> A massive accommodation infrastructure in the form of 5 in-campus hostels are available
+                                catering to the need of 1200 and an odd(approx) number of students.</b></p>
+            </div>
+            <div class="rightside">
+                <img src="/media/hostel3.png" alt="">
+            </div>
+        </div>
+
+        <div class="canteen">
+            <div class="leftside1">
+                <h1>Central Mess<h1></h1>
+                    <img src="/media/canteen.png" alt="">
+            </div>
+            <div class="rightside1">
+                <p>The institute is having its self-managed canteen, providing services to a mammoth gathering
+                    of capacity 1000 at a time.
+                    All type of food items and beverages are available and served to all stakeholders on paymeny
+                    basis.
+                    A 43 number of Central Mess staff remain in action throughout in providing quality and
+                    hygienic services to the campus inmates day and night.</p>
+            </div>
+        </div>
+
+
+        <div class="gym">
+            <div class="leftside2">
+                <h1>Multipurpose GYM<h1>
+                        <p>A healthy body gives rise to a healthy mind and a healthy mind, in turn, gives rise to a
+                            successful human being with tremendous potentials. Gandhi Engineering College(GEC,
+                            Bhubaneswar) strongly believes in this ethos and has taken the multi-pronged approach in
+                            ensuring a healthy body and a healthy mind of its students, faculty members, and staff.
+                            Besides avenues for sports or games, students and staff are provided with ultra-modern Gym
+                            facilities within the campus, which cater to the need for regular exercise and body-building
+                            activities of the inmates. A regular Physical Education Teacher(PET) and a Gym instructor
+                            remain in action throughout, in guiding and organizing several activities during the regular
+                            timing of the institution. Separate timing slots are available for both Girls' and Boys' for
+                            the smooth utilization of Gym..</p>
+                        <p><b> A massive accommodation infrastructure in the form of 5 in-campus hostels are available
+                                catering to the need of 1200 and an odd(approx) number of students.</b></p>
+            </div>
+            <div class="rightside2">
+                <img src="/media/gm2.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="medical">
+            <div class="leftside1">
+                <h1>24X7 Medical Facilities<h1></h1>
+                    <img src="/media/medical.jpg" alt="">
+            </div>
+            <div class="rightside1">
+                <p>Gandhi Engineering College has well equipped medical facility within the campus to provide first hand
+                    emergency services to Faculty members and students. Serious cases are generally transferred to any
+                    city hospital in Bhubaneswar. The institute provides 24 hours ambulance service.</p>
+            </div>
+        </div>
+
+        <div class="visit">
+            <div class="leftside3">
+                <h1>Industry Visits & Study Tours<h1></h1>
+                    <p>Experiential learning is one of the corner stone of the umbrella of modern pedagogies we employ
+                        in our institution in order to keep our students abreast of latest technologies and know-hows
+                        prevailing in the industries. Industry visit and study tour-both are organized keping in view
+                        the abundance of opportunities students can avail during their live interactions with industry
+                        experts and eminent research scholars of national and international reputed institutions. With
+                        the change in environment and learning atmosphere, there comes an exponential spike in learning
+                        behaviour and learning ability of the students.</p>
+
+            </div>
+            <div class="rightside3">
+                <img src="/media/visit.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="library">
+            <div class="leftside4">
+                <h1>library<h1></h1>
+                    <img src="/media/library.jpg" alt="">
+            </div>
+            <div class="rightside4">
+                <p>Central Library sets the goal of establishing a world-class library by integrating information
+                    sources and services across disciplines in one umbrella by building a sound and comprehensive
+                    collection of both conventional and electronic resources on all branches of knowledge with robust
+                    hi-tech infrastructural facilities and to redesign and revamp the systems and services in efficient,
+                    effective, and dynamic ways tailoring to meet the myriad information needs of students, research
+                    scholars, and faculty members of the college pin-pointedly, exhaustively and expeditiously anywhere
+                    on campus and beyond 24 hours for the sake of promoting academic excellence.</p>
+            </div>
+        </div>
+
+        <div class="bank">
+            <div class="leftside">
+                <h1>Banking Facilities<h1></h1>
+                    <p>The institute campus is hosted with SBI, GEC Campus Branch (IFSC Code: SBIN0017949, Branch Code:
+                        017949) for providing essential banking services.
+                        <br>
+                        The campus is also having an Automated Teller Machine(ATM) of SBI, catering to the needs of all
+                        stakeholders, 24X7, throughout the year.
+                    </p>
+
+            </div>
+            <div class="rightside">
+                <img src="/media/sbi.jpg" alt="">
+            </div>
+        </div>
+
+
+        <div class="bus">
+            <div class="leftside1">
+                <h1>Transport Facilities<h1></h1>
+                    <img src="/media/transport.jpg" alt="">
+            </div>
+            <div class="rightside1">
+                <p>A fleet of 20 buses, each of capacity 50, remain all the time ready to provide on the road
+                    communication facilities between the college campus and heart of the twin cities-Bhubaneswar and
+                    Cuttack. The facilities are offered to the students, their parents, and staff members who are
+                    availing it, as a complementary service. Besides regular to-and-fro communication between the
+                    college campus and various destinations in twin cities, the fleet of buses are also used for the
+                    following set of activities:</p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    {{>footer}}
+    {{>copyright}}
+</body>
+
+</html>

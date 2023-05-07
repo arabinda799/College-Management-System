@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+    <style>
+        body a {
+            color: #000;
+        }
+
+        section {
+            padding: 0;
+        }
+
+        .box {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 2rem;
+            width: 86%;
+            margin: 10rem auto 5rem;
+            text-align: justify;
+        }
+
+        .card-icons {
+            font-size: 2.2rem;
+            color: #588dff;
+            background: #e4e7e7;
+            border-radius: 50%;
+            width: 65px;
+            height: 65px;
+            padding-left: 15.5px;
+            display: block;
+            margin: 1rem 0 0.5rem;
+        }
+
+        .card:hover .card-icons {
+            background: #588dff;
+            color: #fff;
+        }
+
+        .card {
+            box-shadow: 0px 0px 4px;
+            height: 14rem;
+            border-radius: 0.9rem;
+            display: flex;
+            justify-content: flex-start;
+            background: #eeeeee;
+            transition: all 400ms ease;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        body h2 {
+            margin: 0;
+            text-transform: capitalize;
+        }
+
+        .map {
+            text-align: center;
+        }
+
+        .mob {
+            text-align: center;
+        }
+
+        .enquiry {
+            width: 86%;
+            margin: auto;
+            text-align: center;
+            box-shadow: 0px 0px 10px;
+            margin-bottom: 4rem;
+            border-radius: 0.3rem;
+        }
+        .enquiry h2{
+            font-size: 30px;
+            padding-top: 1rem;
+        }
+        .enquiry form{
+            width: 100%;
+            margin: auto;
+            padding-top: 25px;
+        }
+        .enquiry input{
+            width: 40%;
+            margin: 1rem;
+            height: 2rem;
+            border: none;
+            border-bottom: 1px solid #5a5aff;
+            background: #e4e7e7;
+        }
+        .enquiry input{
+            font-size: 17px;
+        }
+        .enquiry textarea{
+            width: 83%;
+            height: 10rem;
+            background: #e4e7e7;
+            border: 1px solid #5a5aff;
+        }
+        .enquiry textarea{
+            font-size: 17px;
+        }
+        .enquiry button{
+            width: 83%;
+            height: 2em;
+            background: #417eff;
+            height: 2rem;
+            margin-top: 1.2rem;
+            margin-bottom: 3rem;
+            cursor: pointer;
+            font-size: 17px;
+            color: #fff;
+            border-radius: 0.3rem;
+        }
+        .enquiry button:hover{
+            color: #000;
+            background: #f75842;
+        }
+        .location{
+            display: flex;
+            margin-bottom: 1rem;
+        }
+        .location img{
+            width: 50%;
+            height: 305px;
+        }
+    </style>
+</head>
+
+<body>
+    {{>header}}
+
+    <!--------contact section starts here-------->
+    <section class="box">
+        <div class="card1 card">
+            <div> <i class="bi card-icons bi-telephone-forward"></i></div>
+            <div class="mob">
+                <h2>call here</h2>
+                <a href="tel:7852933283">7852933283</a>
+                <br>
+                <a href="tel:9348499855"> 9348499855</a>
+            </div>
+
+        </div>
+        <div class="card2 card">
+            <div> <i class="bi card-icons bi-envelope-at"></i></div>
+            <div>
+                <a href="mailto:bishnuprasad1270@gmail.com">bishnuprasad1270@gmail.com</a>
+                <br>
+                <a href="mailto:priyankaswain458@gmail.com">priyankaswain458@gmail.com</a>
+            </div>
+
+        </div>
+        <div class="card3 card">
+            <div>
+                <a href="https://www.google.com/maps/place/Gandhi+Engineering+College/@20.2375989,85.7242104,17.87z/data=!4m12!1m6!3m5!1s0x3a19a9ab379f5add:0xac5267d0f9776906!2sGandhi+Engineering+College!8m2!3d20.2374698!4d85.725334!3m4!1s0x3a19a9ab379f5add:0xac5267d0f9776906!8m2!3d20.2374698!4d85.725334"
+                    target="_blank"><i class="bi card-icons bi-pin-map"></i></a>
+            </div>
+            <div class="map">
+                <a href="https://www.google.com/maps/place/Gandhi+Engineering+College/@20.2375989,85.7242104,17.87z/data=!4m12!1m6!3m5!1s0x3a19a9ab379f5add:0xac5267d0f9776906!2sGandhi+Engineering+College!8m2!3d20.2374698!4d85.725334!3m4!1s0x3a19a9ab379f5add:0xac5267d0f9776906!8m2!3d20.2374698!4d85.725334"
+                    target="_blank">
+                    <h2>Find here</h2>
+                </a>
+                <p>
+                    <a href="" target="_blank">Gandhi Vihar,<br> Badaraghunathpur,<br> PO: Madanpur, Near Janla</a>
+                </p>
+            </div>
+
+        </div>
+    </section>
+    <section class="enquiry">
+        <h2>SUBMIT AN ENQUIRY</h2>
+        <form action="">
+            <input type="text" name="name" id="name" placeholder="Full Name....">
+            <input type="email" name="email" id="email" placeholder="Email....">
+            <input type="tel" name="mob" id="mob" placeholder="Mobile No....">
+            <input type="text" name="query" id="query" placeholder="Query....">
+            <textarea name="text" id="desc" cols="30" rows="10" placeholder="Description"></textarea>
+            <button>Submit</button>
+        </form>
+    </section>
+    <section class="location">
+        <img src="../media/img8.jpg" alt="" srcset="">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3743.51489402647!2d85.72314531425346!3d20.237469786432364!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a19a9ab379f5add%3A0xac5267d0f9776906!2sGandhi%20Engineering%20College!5e0!3m2!1sen!2sin!4v1675452707198!5m2!1sen!2sin" width="631.667" height="305" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    </section>
+
+
+
+
+
+
+
+
+
+
+    {{>footer}}
+    {{>copyright}}
+</body>
+
+</html>

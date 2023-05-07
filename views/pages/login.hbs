@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="../css/login.css" />
+  <style>
+    .user {
+      margin-top: -35px;
+      margin-bottom: 55px;
+      margin-left: 55px;
+    }
+
+    #indicator {
+      border: 1px solid black;
+      width: 225px;
+    }
+    .user span {
+      margin-right: 2rem;
+    }
+    .user span:hover {
+      cursor: pointer;
+    }
+    a {
+      text-decoration: none;
+      color: #000;
+    }
+  </style>
+</head>
+
+<body>
+  <section>
+    <div class="rt-container">
+      <div class="col-rt-12">
+        <div class="Scriptcontent">
+          <section>
+
+            <div class="box">
+
+              <div class="square" style="--i:0;"></div>
+              <div class="square" style="--i:1;"></div>
+              <div class="square" style="--i:2;"></div>
+              <div class="square" style="--i:3;"></div>
+              <div class="square" style="--i:4;"></div>
+              <div class="square" style="--i:5;"></div>
+
+              
+              {{#if error}}
+                <div class="alert" style="background: #f92b2b;">
+                  <h2 style="font-size: 23px;">Not logged in!! Incorrect email or password!!</h2>
+                </div>
+              {{/if}}
+              
+
+              <div class="container">
+                <div class="form">
+                  <div class="user">
+                    <a href="/login"><span onclick="admin()">Admin</span></a>
+                    <span onclick="faculty()">Faculty</span>
+                    <span onclick="student()">Student</span>
+                    <hr id="indicator">
+                  </div>
+                  <form action="/admin_login" id="admin-form" style="display: block;" method="post">
+                    <div class="inputBx">
+                      <input type="email" required="required" name="email">
+                      <span>Admin Email</span>
+                      <i class="fas fa-user-circle"></i>
+                    </div>
+                    <div class="inputBx password">
+                      <input id="password-input" type="password" name="password" required="required">
+                      <span>Password</span>
+                      <a href="#" class="password-control" onclick="return show_hide_password(this);"></a>
+                      <i class="fas fa-key"></i>
+                    </div>
+                    <div class="inputBx">
+                      <input type="submit" value="Log in">
+                    </div>
+                  </form>
+
+                  <form action="/faculty_login" id="faculty-form" style="display: none;" method="post">
+                    <div class="inputBx">
+                      <input type="text" required="required" name="email">
+                      <span>Faculty Email</span>
+                      <i class="fas fa-user-circle"></i>
+                    </div>
+                    <div class="inputBx password">
+                      <input id="password-input" type="password" name="password" required="required">
+                      <span>Password</span>
+                      <a href="#" class="password-control" onclick="return show_hide_password(this);"></a>
+                      <i class="fas fa-key"></i>
+                    </div>
+                    <div class="inputBx">
+                      <input type="submit" value="Log in">
+                    </div>
+                  </form>
+
+                  <form action="/student_login" id="student-form" style="display: none;" method="post">
+                    <div class="inputBx">
+                      <input type="text" required="required" name="email">
+                      <span>Student Email</span>
+                      <i class="fas fa-user-circle"></i>
+                    </div>
+                    <div class="inputBx password">
+                      <input id="password-input" type="password" name="password" required="required">
+                      <span>Password</span>
+                      <a href="#" class="password-control" onclick="return show_hide_password(this);"></a>
+                      <i class="fas fa-key"></i>
+                    </div>
+                    <div class="inputBx">
+                      <input type="submit" value="Log in">
+                    </div>
+                  </form>
+                  <p><a href="#">Forgot password?</a></p>
+                </div>
+              </div>
+
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+  <script src="../js/script.js"></script>
+  <script>
+    let adminForm = document.getElementById("admin-form");
+    // adminForm.style.display="none";
+    let facultyForm = document.getElementById("faculty-form");
+    let studentForm = document.getElementById("student-form");
+
+    function admin() {
+      adminForm.style.display = "block";
+      facultyForm.style.display = "none";
+      studentForm.style.display = "none";
+    }
+
+    function faculty() {
+      adminForm.style.display = "none";
+      facultyForm.style.display = "block";
+      studentForm.style.display = "none";
+    }
+
+    function student() {
+      adminForm.style.display = "none";
+      facultyForm.style.display = "none";
+      studentForm.style.display = "block";
+    }
+  </script>
+</body>
+
+</html>

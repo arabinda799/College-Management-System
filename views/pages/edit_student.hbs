@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Register</title>
+
+   <link rel="stylesheet" href="../css/register.css">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+   <style>
+      body {
+         animation: none;
+      }
+
+      a {
+         text-decoration: none;
+      }
+
+      div#student {
+         padding-top: 30px;
+      }
+
+      button {
+         background: #fff;
+      }
+
+      .form {
+         padding-top: 20px;
+      }
+   </style>
+</head>
+
+<body>
+
+   {{#if exist}}
+   <div class="alert" style="padding-left: 40px; margin-top: 10px; background: #f92b2b;">
+      <h2>User already exists. <a href="/register">Register</a> a new user!!!!</h2>
+   </div>
+   {{/if}}
+
+   {{#if success}}
+   <div class="alert" style="padding-left: 40px; margin-top: 10px; background: #3eb573">
+      <h2>User register!! <a href="/view">Click here</a> to view in the list</h2>
+   </div>
+   {{/if}}
+
+   {{#if notMatch}}
+   <div class="alert" style="padding-left: 40px; margin-top: 10px; background: #e36747d4">
+      <h2>Password don't match try again</h2>
+   </div>
+   {{/if}}
+
+
+   <section>
+
+      {{!-- Student Registration --}}
+
+      {{#each data}}
+         <div class="form" id="student">
+            <h1 style="text-align: center">"{{name}}" Details</h1>
+            <form action="/edit_student/{{id}}" method="post" enctype="multipart/form-data">
+               <div class="form-group">
+                  <div class="col-4">
+                     <label for="name">Full Name</label>
+                     <input type="text" name="name" id="name" required value="{{this.name}}" maxlength="60">
+                  </div>
+                  <div class="col-4">
+                     <label for="regd_no">Registration No.</label>
+                     <input type="text" name="regd_no" id="regd_no" required value="{{this.regd_no}}" maxlength="20">
+                  </div>
+                  <div class="col-4">
+                     <label for="roll_no">Roll No.</label>
+                     <input type="text" name="roll_no" id="roll_no" required value="{{this.roll_no}}" maxlength="7">
+                  </div>
+                  <div class="col-4">
+                     <label for="father_name">Father's Name</label>
+                     <input type="text" name="father_name" id="father_name" required value="{{this.father_name}}" maxlength="60">
+                  </div>
+                  <div class="col-4">
+                     <label for="mother_name">Mother's Name</label>
+                     <input type="text" name="mother_name" id="mother_name" required value="{{this.mother_name}}" maxlength="60">
+                  </div>
+                  <div class="col-4">
+                     <label for="dob">DOB</label>
+                     <input type="date" name="dob" id="dob" required value="{{this.dob}}">
+                  </div>
+                  <div class="col-4">
+                     <label for="gender">Gender</label>
+                     <input type="text" name="gender" id="gender" required value="{{this.gender}}" maxlength="10">
+                  </div>
+                  <div class="col-4">
+                     <label for="phone">Phone No</label>
+                     <input type="text" name="phone" id="phone" required value="{{this.phone}}" maxlength="10">
+                  </div>
+                  <div class="col-4">
+                     <label for="email">Email</label>
+                     <input type="text" name="email" id="email" required value="{{this.email}}" maxlength="60">
+                  </div>
+                  <div class="col-4">
+                     <label for="blood">Blood Group</label>
+                     <input type="text" name="blood" id="blood" required value="{{this.blood}}" maxlength="10">
+                  </div>
+                  <div class="col-4">
+                     <label for="address">Address</label>
+                     <input type="text" name="address" id="address" required value="{{this.address}}" maxlength="250">
+                  </div>
+                  <div class="col-4">
+                     <label for="father_phn">Father's Phone No.</label>
+                     <input type="text" name="father_phn" id="father_phn" required value="{{this.father_phn}}" maxlength="10">
+                  </div>
+                  <div class="col-4">
+                     <label for="semester">Semester</label>
+                     <input type="text" name="semester" id="semester" required value="{{this.semester}}" maxlength="5">
+                  </div>
+                  <div class="col-4">
+                     <label for="course">Course</label>
+                     <input type="text" name="course" id="course" required value="{{this.course}}" maxlength="10">
+                  </div>
+                  <div class="col-4">
+                     <label for="department">Department</label>
+                     <input type="text" name="department" id="department" required value="{{this.department}}" maxlength="30">
+                  </div>
+                  <div class="col-4">
+                     <label for="section">Section</label>
+                     <input type="text" name="section" id="section" required value="{{this.section}}" maxlength="5">
+                  </div>
+                  <div class="col-4">
+                     <label for="father_email">Father's Email</label>
+                     <input type="text" name="father_email" id="father_email" required value="{{this.father_email}}" maxlength="60">
+                  </div>
+                  <div class="col-4">
+                     <label for="image">Image</label>
+                     <input type="file" name="image" id="image" required>
+                  </div>
+
+                  <div class="btn">
+                     <button type="submit">Edit</button>
+                  </div>
+               </div>
+            </form>
+            <div class="btn">
+               <a href="/student_list"><button class="view">Back to List</button></a>
+
+            </div>
+         </div>
+      {{/each}}
+
+
+
+
+   </section>
+
+
+
+
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"></script>
+</body>
+
+</html>

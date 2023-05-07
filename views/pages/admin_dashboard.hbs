@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome {{data.name}}</title>
+    <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+
+<body>
+    <div class="container">
+        <aside>
+            <ul>
+                <li><a href="/admin_profile">View Profile</a></li>
+                <li><a href="/employee_list">Employee</a></li>
+                <li><a href="/student_list">Students</a></li>
+                <li id="logout"><a href="/logout">Log out</a></li>
+            </ul>
+        </aside>
+        <div class="main">
+            <section class="upper">
+                <div class="upper-img">
+                    <img src="../userImages/{{data.image}}" alt="" width="95px">
+                </div>
+                <div class="upper-info">
+                    <h2>{{data.name}}</h2>
+                <p>{{data.emp_id}}</p>
+                </div>
+            </section>
+            <section class="lower">
+                <h3>Admin Information</h3>
+                <table>
+                    <tr>
+                        <th>Full Name</th>
+                        <td id="dot">:</td>
+                        <td>{{data.name}}</td>
+                    </tr>
+                    <tr>
+                        <th>Mob</th>
+                        <td id="dot">:</td>
+                        <td>{{data.phone}}</td>
+                    </tr>
+                    <tr>
+                        <th>Email</th>
+                        <td id="dot">:</td>
+                        <td>{{data.email}}</td>
+                    </tr>
+                    <tr>
+                        <th>Gender</th>
+                        <td id="dot">:</td>
+                        <td>{{data.gender}}</td>
+                    </tr>
+                </table>
+            </section>
+        </div>
+    </div>
+</body>
+
+</html>

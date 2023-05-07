@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome {{data.name}}</title>
+    <link rel="stylesheet" href="../css/profile.css">
+</head>
+
+<body>
+    <div class="container">
+        
+        <div class="main">
+            <section class="lower">
+                <h3>Academic Information</h3>
+                <table>
+                    <tr>
+                        <th>Full Name</th>
+                        <td id="dot">:</td>
+                        <td>{{data.name}}</td>
+                    </tr>
+                    <tr>
+                        <th>Faculty ID</th>
+                        <td id="dot">:</td>
+                        <td>{{data.emp_id}}</td>
+                    </tr>
+                    <tr>
+                        <th>Department</th>
+                        <td id="dot">:</td>
+                        <td>{{data.department}}</td>
+                    </tr>
+                    <tr>
+                        <th>Position</th>
+                        <td id="dot">:</td>
+                        <td>{{data.position}}</td>
+                    </tr>
+                    <tr>
+                        <th>Qualification</th>
+                        <td id="dot">:</td>
+                        <td>{{data.qualification}}</td>
+                    </tr>
+                    <tr>
+                        <th>DOJ</th>
+                        <td id="dot">:</td>
+                        <td>{{doj}}</td>
+                    </tr>
+                    <tr>
+                        <th>Mob</th>
+                        <td id="dot">:</td>
+                        <td>{{data.phone}}</td>
+                    </tr>
+                    <tr>
+                        <th>Email</th>
+                        <td id="dot">:</td>
+                        <td>{{data.email}}</td>
+                    </tr>
+                    <tr>
+                        <th>Gender</th>
+                        <td id="dot">:</td>
+                        <td>{{data.gender}}</td>
+                    </tr>
+                    <tr>
+                        <th>Maritall Status</th>
+                        <td id="dot">:</td>
+                        <td>{{data.marital_status}}</td>
+                    </tr>
+                    <tr>
+                        <th>DOB</th>
+                        <td id="dot">:</td>
+                        <td>{{dob}}</td>
+                    </tr>
+                    <tr>
+                        <th>Address</th>
+                        <td id="dot">:</td>
+                        <td>{{data.address}}</td>
+                    </tr>
+                    <tr>
+                        <th>Blood Group</th>
+                        <td id="dot">:</td>
+                        <td>{{data.blood}}</td>
+                    </tr>
+                    <tr>
+                        <th>Aadhar</th>
+                        <td id="dot">:</td>
+                        <td>{{data.aadhar}}</td>
+                    </tr>
+                    <tr>
+                        <th>Account</th>
+                        <td id="dot">:</td>
+                        <td>{{data.account}}</td>
+                    </tr>
+                    <tr>
+                        <th>Bank Name</th>
+                        <td id="dot">:</td>
+                        <td>{{data.bank}}</td>
+                    </tr>
+                    
+                </table>
+            </section>
+            <aside>
+            <div class="profile-img"><img src="../userImages/{{data.image}}" alt=""></div>
+            <p>{{data.name}}</p>
+            <a href="/logout"><button>Log out</button></a>
+        </aside>
+        </div>
+        
+        <section class="bottom">
+            <a href="/"><button>Home</button></a>
+            <a href="/admin_dashboard"><button>Back</button></a>
+        </section>
+        
+    </div>
+</body>
+
+</html>

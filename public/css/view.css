@@ -1,0 +1,104 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background: linear-gradient(to top,#7d7d7d,#000000);
+    height: 100vh;
+}
+.navbar {
+    height: 55px;
+    display: block;
+    background: linear-gradient(to top ,#9883ff,#3800bf);
+}
+.left{
+    margin-top: 16px;
+    float: left;
+    /* position: absolute; */
+    margin-left: 35px;
+}
+.left a{
+    text-decoration: none;
+    margin: 0px 25px;
+    font-size: 18px;
+    font-family: cursive;
+    font-weight: 500;
+    color: #000000;
+font-family: 'Rubik', sans-serif;
+}
+.right {
+    margin-top: 16px;
+    float: right;
+    /* position: relative; */
+    margin-right: 60px;
+}
+.right input{
+    width: 200px;
+    padding: 6px 6px;
+    border-radius: 7px;
+    border: none;
+    overflow: hidden;
+    text-align: center;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+.right input:focus{
+    outline: none;
+}
+.right button{
+    margin-left: 5px;
+    padding: 6px 18px;
+    font-size: 14px;
+    border: none;
+    border-radius: 6px;
+    background-color: #121111;
+    color: #f4eeee;
+    letter-spacing: 0.3px;
+}
+.right button:hover {
+    cursor: pointer;
+    background-color: #191212;
+    color: white;
+}
+.right button:active {
+    background-color: #2f25fb;
+}
+.container {
+    display: flex;
+    justify-content: center;
+}
+.update{
+    height: 30px;
+}
+.update button{
+    background: rgb(255, 0, 0);
+}
+table {
+    border-collapse: collapse;
+    border: 2.5px solid #525252f2;
+
+    }
+th, td {
+    border-collapse: collapse;
+    border: 1px solid #0000007a;
+}
+.table{
+    margin: 6rem auto 0;
+    background-color: #e6e6e6;
+}
+table:hover {
+    cursor: pointer;
+}
+.th, .td {
+    padding: 24px 18px;
+}
+
+.th {
+    color: black;
+    font-family: 'Signika', sans-serif;
+}
+.td{
+    color: #181d22;
+font-family: 'Signika', sans-serif;
+}
